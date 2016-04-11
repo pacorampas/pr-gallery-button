@@ -18,13 +18,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </head>
   <body unresolved>
 
-    <pr-gallery-button>
+    <p>Click to disabled and enabled, only for test</p>
+    <pr-gallery-button id="prev">
       Prev
     </pr-gallery-button>
 
-    <pr-gallery-button disabled>
+    <pr-gallery-button disabled id="next">
       Next
     </pr-gallery-button>
 
   </body>
+  <script>
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+
+    prev.addEventListener('click', function() {
+      console.log(this.disabled);
+      this.disabled = !this.disabled;
+    });
+
+    next.addEventListener('click', function() {
+      console.log(this.disabled);
+      this.disabled = !this.disabled;
+    });
+  </script>
 </html>

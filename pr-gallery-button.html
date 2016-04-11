@@ -40,6 +40,11 @@ Example:
         line-height: 40px;
         text-align: center;
         box-sizing: border-box;
+        cursor: pointer;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
       }
 
       :host[disabled] {
@@ -56,7 +61,11 @@ Example:
       is: 'pr-gallery-button',
 
       properties: {
-        disabled: Boolean
+        disabled: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        }
       }
     });
   </script>
